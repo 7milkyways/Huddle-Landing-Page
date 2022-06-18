@@ -22,18 +22,29 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 90px;
 }
 
 .nav img{
-   transform: scale(0.7);
+   width: 190px;
 }
 
 .nav button{
-    padding: 15px 60px;
+    color: hsl(192, 100%, 9%);
+    padding: 13px 60px;
     border: none;
     border-radius: 25px;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 1px 1px 10px  hsl(208, 11%, 55%);
+    box-shadow: 1px 1px 5px  hsl(0, 0%, 80%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity ease 0.45s;
+}
+
+.nav button:hover{
+    opacity: 0.8;
 }
 
 .header_intro{
@@ -74,7 +85,14 @@ font-family: 'Poppins', sans-serif;
     border-radius: 25px;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity ease 0.45s;
+}
+
+.intro_btn:hover{
+    opacity: 0.7;
+    box-shadow: 1px 1px 10px  hsl(208, 11%, 55%);
 }
 
 .banner img{
@@ -84,7 +102,9 @@ font-family: 'Poppins', sans-serif;
 }
 
 #main{
-    padding: 100px 35px 35px;
+    width: 100%;
+    padding: 100px 35px 15em;
+    position: relative;
 }
 
 .card_cover{
@@ -104,7 +124,7 @@ font-family: 'Poppins', sans-serif;
     border-radius: 10px;
     padding: 35px 60px;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 1px 1px 10px  hsl(208, 11%, 55%);
+    box-shadow: -1px -1px 5px  hsl(0, 0%, 80%);
 }
 
 
@@ -133,33 +153,281 @@ font-family: 'Poppins', sans-serif;
 }
 
 .bottom_card{
-    width: 45%;
+    width: 50%;
     border-radius: 10px;
-    padding: 35px 0;
+    padding: 55px 0;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 1px 1px 10px  hsl(208, 11%, 55%);
+    box-shadow: -1px -1px 5px  hsl(0, 0%, 80%);
     text-align: center;
     z-index: 99;
+    margin: 0 auto;
     position: absolute;
-    display: none;
+    left: 50%;
+    bottom: -13em;
+    transform: translate(-50%, -50%);
 }
 
 .bottom_card h1{
     font-family: 'Poppins', sans-serif;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 600;
     color: hsl(192, 100%, 9%);
 }
 
-#footer{
-    background-color: hsl(192, 100%, 9%);
-    padding: 35px 85px;
+.bottom_card_btn{
+    background-color: hsl(322, 100%, 66%);
+    color: hsl(193, 100%, 96%);
+    margin-top: 25px;
+    padding: 16px 75px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    transition: opacity ease 0.45s;
+    cursor: pointer;
 }
 
-.footer_logo svg{
-    transform: scale(0.8);
+.bottom_card_btn:hover{
+    opacity: 0.7;
+    box-shadow: 1px 1px 10px  hsl(208, 11%, 55%);
+}
+
+#footer{
+    width: 100%;
+    background-color: hsl(192, 100%, 9%);
+    padding: 8em 90px 35px;
 }
 
 .footer_logo svg path{
     fill: hsl(0, 0%, 100%);
+}
+
+.footer_info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10em;
+    align-items: start;
+    justify-items: end;
+    margin-top: 35px;
+    padding: 0 10em 0 25px;
+}
+
+.contact{
+    width: 100%;
+}
+
+.contact ul{
+    list-style: none;
+}
+
+.contact ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact ul li:nth-of-type(1){
+    align-items: flex-start;
+}
+
+.contact ul li img{
+    width: 14px;
+}
+
+.contact ul li p{
+    display: inline-block;
+    margin: 0 10px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: hsl(0, 0%, 100%);
+}
+
+.footer_links_cover{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.footer_links_cover ul{
+    list-style: none;
+}
+
+.footer_links_cover ul li{
+    margin-bottom: 15px;
+}
+
+.footer_link{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+.socials span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid hsl(208, 11%, 55%);
+    border-radius: 50%;
+    text-align: center;
+    margin: auto 5px;
+}
+
+.socials span a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+    margin-top: 7px;
+    transition: color ease 0.5s;
+}
+
+.socials span a:hover{
+    color: hsl(322, 100%, 66%);
+}
+
+.footer_copyright{
+    width: 100%;
+}
+
+.footer_copyright p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: hsl(0, 0%, 100%);
+    text-align: right;
+}
+
+@media screen and (max-width: 760px) {
+    .header_intro{
+        grid-template-columns: 1fr;
+    }
+
+    #hero{
+        background-image: url(images/bg-hero-mobile.svg);
+        padding: 55px 0;
+    }
+
+    .nav{
+        width: 100%;
+        padding: 10px 18px;
+    }
+
+    .nav button{
+        padding: 6px 20px;
+        font-size: 13px;
+    }
+    
+
+    .nav img{
+       width: 120px;
+     }
+
+     .intro{
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    .intro h1{
+        font-size: 26px;
+        line-height: 1.6;
+        padding: 0 55px;
+    }
+
+    
+    .intro p{
+        padding: 0 55px;
+        line-height: 1.5;
+        margin-top: 25px;
+    }
+    
+    .intro_btn{
+       margin: 25px 0;
+    }
+
+    .banner{
+        width: 80%;
+        margin: 0 auto;
+    }
+     
+     .banner img{
+        transform: scale(0.9);
+    }
+
+     .card_cover{
+        width: 100%;
+     }
+
+     .card{
+        padding: 35px 15px;
+        flex-direction: column;
+    }
+
+    .card:nth-child(odd){
+        flex-direction: column-reverse;
+    }
+    
+    .card_img{
+        height: 150px;
+     }
+
+     .card_intro{
+        width: 90%;
+     }
+
+     .card_intro h1{
+        text-align: center;
+        margin: 25px auto;
+     }
+     
+     .card_intro p{
+        padding: 0;
+        text-align: center;
+    }
+
+    .bottom_card{
+        width: 90%;
+        padding: 55px 15px;
+    }
+
+    .bottom_card h1{
+        font-size: 20px;
+    }
+
+    #footer{
+        padding: 8em 0 35px;
+    }
+
+    .footer_logo{
+        width: 60%;
+        padding: 0 25px;
+    }
+
+     .footer_info{
+        grid-template-columns: 1fr;
+        width: 100%;
+        column-gap: 0;
+        padding: 0 25px;
+     }
+
+     .footer_links_cover{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .socials{
+        width: 80%;
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+
+     .footer_copyright p{
+        text-align: center;
+    }
 }
