@@ -394,7 +394,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 
-/* try 768px later */
+
 @media screen and (max-width: 760px) { 
     .header_intro{
         grid-template-columns: 1fr;
